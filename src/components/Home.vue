@@ -11,7 +11,7 @@
           <p>the Donation page and empty your wallet</p>
         </td>
         <td>
-          <img src="../assets/homer.gif" alt="description here" />
+          <img src="../assets/BZfW.gif" alt="description here" />
         </td>
       </tr>
     </table>
