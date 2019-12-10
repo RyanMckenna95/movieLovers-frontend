@@ -7,9 +7,8 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
-          <b-nav-item to="/movies"><i class="fa fa-list" style="padding: 5px"> Manage Movies</i></b-nav-item>
-          <b-nav-item to="/donate"><i class="fa fa-money" style="padding: 5px"> Donate</i></b-nav-item>
-          <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 5px"> Map</i></b-nav-item>
+          <b-nav-item to="/movie"><i class="fa fa-list" style="padding: 5px"> Manage Movies</i></b-nav-item>
+          <b-nav-item to="/show"><i class="fa fa-list" style="padding: 5px"> Manage Shows</i></b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item to="/about"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
@@ -25,7 +24,7 @@
 </template>
 
 <script>
-  export default {
+export default {
   name: 'App'
 }
 </script>
