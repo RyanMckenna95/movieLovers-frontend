@@ -5,12 +5,11 @@
     <table align="center">
       <tr>
         <td>
-          <p class="lead"><b><i>Time for a change !!</i></b>
-          <p>Out with Boring Prumt - Giving has never been so easy.</p>
-          <p>the Donation page and empty your wallet</p>
+          <p class="lead"><b><i>This is a demo site</i></b>
+          <p>testing is still being done on pages.</p>
         </td>
         <td>
-          <img src="../assets/BZfW.gif" alt="description here" />
+          <img id="reel" src="../assets/BZfW.gif" alt="description here" />
         </td>
       </tr>
     </table>
@@ -35,6 +34,10 @@
   #app1 {
     width: 60%;
     margin: 0 auto;
+  }
+
+  #reel{
+    background-color: #e2dae8;
   }
   .vue-title {
     font-size: 70pt;

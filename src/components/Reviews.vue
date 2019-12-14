@@ -25,11 +25,11 @@
                 messagetitle: ' Reviews of movie ',
                 reviews: [],
                 errors: [],
-                columns: ['_id', 'author', 'titleID', 'reviewedTitle','review' ,'rating','likes', 'edit', 'like', 'delete'],
+                columns: ['_id', 'author', 'reviewedTitle','review' ,'rating','likes', 'edit', 'like', 'delete'],
                 options: {
                     perPage:10,
-                    filterable: ['author', 'reviewedTitle', 'rating'],
-                    sortable: ['likes'],
+                    filterable: ['author', 'reviewedTitle'],
+                    sortable: ['likes', 'rating'],
                     headings: {
                         _id: 'ID',
                         author: 'author',
@@ -58,6 +58,10 @@
                         this.errors.push(error)
                         console.log(error)
                     })
+            },
+            editReview: function (id) {
+                this.$router.params = id
+                this.$router.push('reviewEdit')
             },
             likeReview: function (id) {
                     movieService.ReviewLike(id)

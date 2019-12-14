@@ -7,6 +7,7 @@ import Reviews from "@/components/Reviews";
 import AddMovie from "@/components/AddMovie";
 import AddShow from "@/components/AddShow";
 import AddReview from "@/components/AddReview";
+import reviewEdit from "@/components/reviewEdit";
 
 Vue.use(Router);
 
@@ -46,6 +47,12 @@ export default new Router({
             path: "/addReview",
             name: "AddReview",
             component: AddReview
+        },
+        {
+            path: "/reviewEdit",
+            name: "reviewEdit",
+            component: reviewEdit,
+            props: true
         }
     ]
 });

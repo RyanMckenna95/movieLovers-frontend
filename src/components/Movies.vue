@@ -5,7 +5,6 @@
         <v-client-table :columns="columns" :data="movie" :options="options">
             <a slot="purchase" slot-scope="props" class="fa fa-money fa-2x" @click="purchase(props.row._id)"></a>
             <a slot="Delete" slot-scope="props" class="fa fa-trash-o fa-2x" @click="deleteMovie(props.row._id)"></a>
-            <a slot="Reviews" slot-scope="props" class="fa fa-plus fa-2x" @click="addReview(props.row._id)"></a>
         </v-client-table>
     </div>
     </div>
@@ -27,8 +26,11 @@ export default {
       movie: [],
         props:['_id','stock', 'title'],
       errors: [],
-      columns: ['_id', 'title', 'released', 'cost', 'stock', 'purchase','Delete','Reviews'],
+      columns: ['_id', 'title', 'released', 'cost', 'stock', 'purchase','Delete'],
       options: {
+          perPage:10,
+          filterable: ['title', 'released'],
+          sortable: ['cost', 'stock'],
         headings: {
           _id: 'ID',
           title: 'title',

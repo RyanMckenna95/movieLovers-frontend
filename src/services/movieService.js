@@ -30,6 +30,15 @@ export default {
     },
     reviewDelete (id){
         return Api().delete(`/review/${id}`)
+    },
+    fetchReview (id) {
+        return Api().get(`/review/${id}`)
+    },
+    putReview (id, review) {
+        console.log('REQUESTING ' + review._id + ' ' +
+            JSON.stringify(review, null, 5))
+        return Api().put(`/review/edit/${id}`, review,
+            { headers: {'Content-type': 'application/json'} })
     }
 
 
