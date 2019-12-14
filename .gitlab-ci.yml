@@ -35,5 +35,4 @@ preview - staging:
     - npm install
     - npm run clean
     - npm run build
-    - cp CNAME dist/
-    - node_modules/.bin/surge dist
+    - node_modules/.bin/surge dist movielovers-vue.surge.sh
