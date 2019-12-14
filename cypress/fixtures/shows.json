@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "5dc17685ada12c1ed4fb33a2",
+    "title": "House",
+    "season": 3,
+    "released": "2005",
+    "cost": 24,
+    "stock": 100
+  },
+  {
+    "_id": "5dc17685ada12c1ed4fb33a3",
+    "title": "The boys",
+    "season": 1,
+    "released": "2019",
+    "cost": 10,
+    "stock": 1765
+  },
+  {
+    "_id": "5dc17685ada12c1ed4fb33a4",
+    "title": "firefly",
+    "season": 2,
+    "released": "2009",
+    "cost": 15,
+    "stock": 0
+  },
+  {
+    "_id": "5df2a3e0f03acd40e4e90f71",
+    "title": "House",
+    "season": 1,
+    "released": "2009",
+    "cost": 13,
+    "stock": 0
+  }
+]
