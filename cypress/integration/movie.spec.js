@@ -27,16 +27,16 @@ describe("Manage Movie page", () => {
             .click();
     });
     describe("For a confirmed delete operation", () => {
-        it("reduces the no. of donations by 1", () => {
+        it("reduces the no. of movies by 1", () => {
             cy.get("tbody")
                 .find("tr")
                 .should("have.length", 4);
-            // Click trash/delete link of 3rd donation in list
+            // Click trash/delete link of 4th movie in list
             cy.get("tbody")
                 .find("tr")
-                .eq(2)
+                .eq(3)
                 .find("td")
-                .eq(6)
+                .eq(7)
                 .find("a")
                 .click();
             // Click confirmation button

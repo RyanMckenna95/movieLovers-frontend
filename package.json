@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "clean": "rimraf ./dist && mkdir dist",
+    "start": "npm-run-all serve",
     "start:server": "cd ./dist && httpserver -p 8080 & wait-on http://localhost:8080",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -32,7 +34,14 @@
     "wait-on": "^3.3.0"
   },
   "devDependencies": {
+    "@vue/babel-plugin-transform-vue-jsx": "^1.1.2",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
     "autoprefixer": "^7.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-istanbul": "^4.1.1",
@@ -42,16 +51,10 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
-    "@vue/babel-plugin-transform-vue-jsx": "^1.1.2",
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-vue": "^5.0.0",
+    "surge": "^0.21.3",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
