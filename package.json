@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "cross-env NODE_ENV=dev vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "start:server": "cd ./dist && httpserver -p 8080 & wait-on http://localhost:8080",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "npm-run-all serve",
+    "e2e": "node test/e2e/runner.js",
     "cypress": "cypress run --record --key 84198fce-69fb-407c-95e7-2e0b522bddbe",
     "test": "start-server-and-test start http://localhost:8080 cypress"
   },

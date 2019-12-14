@@ -19,12 +19,12 @@
 
     export default {
         name: 'shows',
-        data () {
+        data() {
             return {
                 messagetitle: ' Shows List ',
                 shows: [],
                 errors: [],
-                columns: ['_id', 'title', 'season', 'released','cost','stock', 'purchase','Delete'],
+                columns: ['_id', 'title', 'season', 'released', 'cost', 'stock', 'purchase', 'Delete'],
                 options: {
                     headings: {
                         _id: 'ID',
@@ -38,7 +38,7 @@
             }
         },
         // Fetches Donations when the component is created.
-        created () {
+        created() {
             this.loadShows()
         },
         methods: {
@@ -105,6 +105,7 @@
                         this.$swal('Cancelled', 'Movie not deleted!', 'info')
                     }
                 })
+            }
         }
     }
 </script>
