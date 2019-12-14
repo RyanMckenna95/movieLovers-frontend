@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "cross-env NODE_ENV=dev vue-cli-service serve",
+    "start:server": "cd ./dist && httpserver -p 8080 & wait-on http://localhost:8080",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "npm-run-all serve",
+    "cypress": "cypress run --record --key 84198fce-69fb-407c-95e7-2e0b522bddbe",
+    "test": "start-server-and-test start http://localhost:8080 cypress"
   },
   "dependencies": {
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
@@ -23,7 +27,8 @@
     "vue-sweetalert2": "^2.1.5",
     "vue-tables-2": "^1.6.13",
     "vueform": "^2.0.0",
-    "vuelidate": "^0.7.4"
+    "vuelidate": "^0.7.4",
+    "wait-on": "^3.3.0"
   },
   "devDependencies": {
     "@vue/babel-plugin-transform-vue-jsx": "^1.1.2",
