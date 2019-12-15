@@ -4,7 +4,7 @@
                             <label class="form__label">Enter Author Name</label>
                             <input class="form__input" v-model.trim="$v.author.$model"/>
                         </div>
-                        <div class="error" v-if="!$v.author.required">Title is Required</div>
+                        <div class="error" v-if="!$v.author.required">Author name is Required</div>
 
                         <div class="form-group" :class="{ 'form-group--error': $v.titleID.$error }">
                             <label class="form__label">title ID</label>
@@ -16,7 +16,7 @@
                             <label class="form__label">Film Title</label>
                             <input class="form__input" v-model.trim="$v.reviewedTitle.$model"/>
                         </div>
-                        <div class="error" v-if="!$v.reviewedTitle.required">Title is Required</div>
+                        <div class="error" v-if="!$v.reviewedTitle.required">Film is Required</div>
 
                         <div class="form-group" :class="{ 'form-group--error': $v.reviewt.$error }">
                             <label class="form__label">Write Review</label>
@@ -29,6 +29,7 @@
                             <input class="form__input" type="number" v-model.trim="rating"/>
                         </div>
                         <div class="error" v-if="!$v.rating.required">Rating is Required</div>
+                        <div class="error" v-if="!$v.rating.between">Rating is between 1 and 10 </div>
 
                         <p>
                             <button class="btn btn-primary btn1" type="submit" :disabled="submitStatus === 'PENDING'">{{ reviewBtnTitle }}</button>
@@ -68,7 +69,7 @@
                 reviewedTitle: this.review.reviewedTitle,
                 reviewt: this.review.review,
                 rating: this.review.rating,
-                movies: {},
+                reviews: {},
                 submitStatus: null
             }
         },
@@ -105,7 +106,7 @@
                             author: this.author,
                             titleID: this.titleID,
                             reviewedTitle: this.reviewedTitle,
-                            reviewt: this.review,
+                            reviewt: this.reviewt,
                             rating: this.rating
                         }
                         this.review = review
@@ -144,7 +145,7 @@
         margin: 0 auto;
     }
     #rev {
-        height: 150px;
+        height: 100px;
     }
     .required-field > label::after {
         content: '*';

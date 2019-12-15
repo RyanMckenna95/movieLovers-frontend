@@ -40,7 +40,7 @@
                         this.temp = response.data
                         this.review = this.temp[0]
                         this.childDataLoaded = true
-                        console.log('Getting Donation in Edit: ' + JSON.stringify(this.review, null, 5))
+                        console.log('Getting Review in Edit: ' + JSON.stringify(this.review, null, 5))
                     })
                     .catch(error => {
                         this.errors.push(error)

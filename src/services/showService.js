@@ -5,13 +5,13 @@ export default {
         return Api().get("/show");
     },
     postShow (show) {
-        return Api().post('/show',show,
-            {headers:{'Content-type': 'application/json'} })
+        return Api().post('/show', show,
+            {headers: {'Content-type': 'application/json'}});
     },
     buyShow (id) {
-        return Api().put(`/show/${id}/purchase`)
+        return Api().put(`/show/${id}/purchase`);
     },
     deleteShow (id) {
-        return Api().delete(`/show/${id}`)
+        return Api().delete(`/show/${id}`);
     },
 };

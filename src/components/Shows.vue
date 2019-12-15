@@ -26,6 +26,9 @@
                 errors: [],
                 columns: ['_id', 'title', 'season', 'released', 'cost', 'stock', 'purchase', 'Delete'],
                 options: {
+                    perPage:10,
+                    filterable: ['title', 'released'],
+                    sortable: ['cost', 'stock', 'season'],
                     headings: {
                         _id: 'ID',
                         title: 'Title',

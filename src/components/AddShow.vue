@@ -75,7 +75,7 @@
                 messagetitle: ' add Show ',
                 title: '',
                 season: '',
-                released: 0,
+                released: 1888,
                 cost: 0,
                 stock: 0,
                 movies: {},
@@ -91,7 +91,7 @@
             },
             released:{
                 required,
-                minValue: 1888
+                minValue: minValue(1888)
             },
             cost: {
                 required
