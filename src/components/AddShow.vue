@@ -19,14 +19,14 @@
                         <div class="error" v-if="!$v.season.required">Season is Required</div>
 
                         <div class="form-group" :class="{ 'form-group--error': $v.released.$error }">
-                            <label class="form-control-label" name="released">Movie release year</label>
+                            <label class="form-control-label" name="released">Show release year</label>
                             <input class="form__input" type="number" v-model.trim="released"/>
                         </div>
                         <div class="error" v-if="!$v.released.minValue">release year must be after 1888 </div>
                         <div class="error" v-if="!$v.released.required">released year is Required</div>
 
                         <div class="form-group" :class="{ 'form-group--error': $v.cost.$error }">
-                            <label class="form-control-label" name="cost">Set cost of Movie</label>
+                            <label class="form-control-label" name="cost">Set cost of Show</label>
                             <input class="form__input" type="number" v-model.trim="cost"/>
                         </div>
                         <div class="error" v-if="!$v.cost.required">Stock is Required</div>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="error" v-if="!$v.stock.required">Stock is Required</div>
                         <p>
-                            <button class="btn btn-primary btn1" type="submit" :disabled="submitStatus === 'PENDING'">Add Movie</button>
+                            <button class="btn btn-primary btn1" type="submit" :disabled="submitStatus === 'PENDING'">Add Show</button>
                         </p>
                         <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your Adding!</p>
                         <p class="typo__p" v-if="submitStatus === 'ERROR'">Please Fill in the Form Correctly.</p>
