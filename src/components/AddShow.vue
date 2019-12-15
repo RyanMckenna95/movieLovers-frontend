@@ -7,7 +7,7 @@
 
                     <form @submit.prevent="submit">
                         <div class="form-group" :class="{ 'form-group--error': $v.title.$error }">
-                            <label class="form__label">Enter Movie Title</label>
+                            <label class="form__label">Enter Show Title</label>
                             <input class="form__input" v-model.trim="$v.title.$model"/>
                         </div>
                         <div class="error" v-if="!$v.title.required">Title is Required</div>
