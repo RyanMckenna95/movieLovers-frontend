@@ -18,11 +18,11 @@
                         </div>
                         <div class="error" v-if="!$v.reviewedTitle.required">Film is Required</div>
 
-                        <div class="form-group" :class="{ 'form-group--error': $v.reviewt.$error }">
+                        <div class="form-group" :class="{ 'form-group--error': $v.review.$error }">
                             <label class="form__label">Write Review</label>
-                            <input id="rev" class="form__input" v-model.trim="$v.reviewt.$model"/>
+                            <input id="rev" class="form__input" v-model.trim="$v.review.$model"/>
                         </div>
-                        <div class="error" v-if="!$v.reviewt.required">Title is Required</div>
+                        <div class="error" v-if="!$v.review.required">Title is Required</div>
 
                         <div class="form-group" :class="{ 'form-group--error': $v.rating.$error }">
                             <label class="form-control-label" name="cost">Set Rating</label>
@@ -60,15 +60,15 @@
 
     export default {
         name: "FormReview",
-        props: ['reviewBtnTitle','review'],
+        props: ['reviewBtnTitle','reviewt'],
         data () {
             return {
                 messagetitle: ' Add Review ',
-                author: this.review.author,
-                titleID: this.review.titleID,
-                reviewedTitle: this.review.reviewedTitle,
-                reviewt: this.review.review,
-                rating: this.review.rating,
+                author: this.reviewt.author,
+                titleID: this.reviewt.titleID,
+                reviewedTitle: this.reviewt.reviewedTitle,
+                review: this.reviewt.review,
+                rating: this.reviewt.rating,
                 reviews: {},
                 submitStatus: null
             }
@@ -83,7 +83,7 @@
             reviewedTitle: {
                 required
             },
-            reviewt: {
+            review: {
                 required
             },
             rating:{
@@ -102,16 +102,16 @@
                     this.submitStatus = 'PENDING'
                     setTimeout(() => {
                         this.submitStatus = 'OK'
-                        var review = {
+                        var reviewt = {
                             author: this.author,
                             titleID: this.titleID,
                             reviewedTitle: this.reviewedTitle,
-                            reviewt: this.reviewt,
+                            review: this.review,
                             rating: this.rating
                         }
-                        this.review = review
-                        console.log('Submitting in ReviewForm : ' + JSON.stringify(this.review, null, 5))
-                        this.addReview(this.review)
+                        this.reviewt = reviewt
+                        console.log('Submitting in ReviewForm : ' + JSON.stringify(this.reviewt, null, 5))
+                        this.$emit('review-is-created-updated',this.reviewt)
                     }, 500)
                 }
             },

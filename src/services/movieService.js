@@ -21,8 +21,8 @@ export default {
     fetchReviews (){
         return Api().get("/review");
     },
-    postReview (reviewAdd) {
-        return Api().post(`/review/write`,reviewAdd,
+    postReview (reviewMod) {
+        return Api().post(`/review/write`,reviewMod,
             {headers:{'Content-type': 'application/json'} });
     },
     ReviewLike (id){
@@ -34,10 +34,10 @@ export default {
     fetchReview (id) {
         return Api().get(`/review/${id}`);
     },
-    putReview (id, reviewEd) {
-        console.log('REQUESTING ' + reviewEd._id + ' ' +
-            JSON.stringify(reviewEd, null, 5));
-        return Api().put(`/review/edit/${id}`, reviewEd,
+    putReview (id, reviewMod) {
+        console.log('REQUESTING ' + reviewMod._id + ' ' +
+            JSON.stringify(reviewMod, null, 5));
+        return Api().put(`/review/edit/${id}`, reviewMod,
             { headers: {'Content-type': 'application/json'} });
     }
 

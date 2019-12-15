@@ -5,7 +5,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <template v-if="childDataLoaded">
-                        <review-form :review="review" reviewBtnTitle="Update Review"
+                        <review-form :reviewt="review" reviewBtnTitle="Update Review"
                                        @review-is-created-updated="updateReview"></review-form>
                     </template>
                 </div><!-- /col -->

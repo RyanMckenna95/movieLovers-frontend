@@ -4,7 +4,7 @@
         <div class="container mt-3 mt-sm-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                        <review-form :review="reviewA" reviewBtnTitle="Add Review"
+                        <review-form :reviewt="review" reviewBtnTitle="Add Review"
                                      @review-is-created-updated="addReview"></review-form>
                 </div><!-- /col -->
             </div><!-- /row -->
@@ -19,7 +19,7 @@
     export default {
         data () {
             return {
-                reviewA: {author: '', titleID: "", reviewedTitle: "", review: "", rating: 1 },
+                review: {author: '', titleID: "", reviewedTitle: "", review: "", rating: 1 },
                 messagetitle: ' Add Review '
             }
         },
