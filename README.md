@@ -79,9 +79,6 @@ I tried using agile method to develop the app building and scaling the app gradu
 ### youtube
 my demo: https://youtu.be/mwOupTYrtyQ
 
-### hosted
-hosted: http://movielovers-vue.surge.sh <br>
-however the backend is not hosted so required backend localhost.
 
 ### references
 
